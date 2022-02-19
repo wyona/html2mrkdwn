@@ -1,4 +1,4 @@
-package io.github.furstenheim;
+package org.wyona.html2mrkdwn;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

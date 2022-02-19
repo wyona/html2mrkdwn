@@ -1,4 +1,4 @@
-package io.github.furstenheim;
+package org.wyona.html2mrkdwn;
 
 public final class OptionsBuilder {
     private String br = "  ";
