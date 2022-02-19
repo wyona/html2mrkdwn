@@ -44,6 +44,8 @@ dependencies {
             "com.shazam:shazamcrest:0.1",
             'com.google.code.gson:gson:2.8.6'
     )
-    compile 'org.jsoup:jsoup:1.13.1'
+    compile (
+            'org.jsoup:jsoup:1.13.1',
+            'org.projectlombok:lombok:1.18.22'
+    )
 }
-
