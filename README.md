@@ -1,11 +1,18 @@
-## Copy Down
-Convert HTML into Markdown with Java.
+## HTML 2 Slack mrkdwn
+Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/formatting) with Java.
+
+### Build
+gradle wrapper
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+./gradlew tasks --all
+./gradlew clean assemble
+ls build/libs/html2mrkdwn-1.0.1.jar
 
 ### Installation
 Gradle:
 ```gradle
 dependencies {
-    compile 'io.github.furstenheim:copy_down:1.0'
+    compile 'org.wyona.html2mrkdwn:html2mrkdwn:1.0.1'
 }
 ```
 
@@ -13,9 +20,9 @@ Maven:
 ```xml
 <dependencies>
     <dependency>
-        <groupId>io.github.furstenheim</groupId>
-        <artifactId>copy_down</artifactId>
-        <version>1.0</version>
+        <groupId>org.wyona.html2mrkdwn</groupId>
+        <artifactId>html2mrkdwn</artifactId>
+        <version>1.0.1</version>
     </dependency>
 </dependencies>
 ```
@@ -75,6 +82,6 @@ public class Main {
 
 
 ### Acknowledgment
-This library is a port to Java of the wonderful library [Turndown.js](https://github.com/domchristie/turndown). This library passes the same test suite as the original library to ensure same behavior.
+This library is a fork of https://github.com/furstenheim/copy-down which is a port to Java of the wonderful library [Turndown.js](https://github.com/domchristie/turndown).
 
 This project is supported by Intellij open source license
