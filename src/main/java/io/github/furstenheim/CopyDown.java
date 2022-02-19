@@ -11,9 +11,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Main class of the package
  */
+@Slf4j
 public class CopyDown {
     public CopyDown () {
         this.options = OptionsBuilder.anOptions().build();
@@ -230,6 +233,8 @@ public class CopyDown {
             addRule("horizontalRule", new Rule("hr", (content, element) -> {
                 return "\n\n" + options.hr + "\n\n";
             }));
+
+            // INFO: Inline link
             addRule("inlineLink", new Rule((element) -> {
                 return options.linkStyle == LinkStyle.INLINED
                        && element.nodeName().equals("a")
@@ -240,8 +245,12 @@ public class CopyDown {
                 if (title.length() != 0) {
                     title = " \"" + title + "\"";
                 }
-                return "["+ content + "](" + href + title + ")";
+                //log.info("Handle inline link ...");
+                return "<" + href + "|" + content + ">";
+                //return "["+ content + "](" + href + title + ")";
             }));
+
+            // INFO: Reference link
             addRule("referenceLink", new Rule((element) -> {
                 return options.linkStyle == LinkStyle.REFERENCED
                        && element.nodeName().equals("a")
@@ -278,18 +287,25 @@ public class CopyDown {
                 }
                 return referenceString;
             }));
+
+            // INFO: Emphasis
             addRule("emphasis", new Rule(new String[]{"em", "i"}, (content, element) -> {
                 if (content.trim().length() == 0) {
                     return "";
                 }
                 return options.emDelimiter + content + options.emDelimiter;
             }));
+
+            // INFO: Strong and bold
             addRule("strong", new Rule(new String[]{"strong", "b"}, (content, element) -> {
                 if (content.trim().length() == 0) {
                     return "";
                 }
-                return options.strongDelimiter + content + options.strongDelimiter;
+                // INFO: Use https://api.slack.com/reference/surfaces/formatting#visual-styles instead https://github.com/furstenheim/copy-down
+                return "*" + content + "*";
+                //return options.strongDelimiter + content + options.strongDelimiter;
             }));
+
             addRule("code", new Rule((element) -> {
                 boolean hasSiblings = element.previousSibling() != null || element.nextSibling() != null;
                 boolean isCodeBlock = element.parentNode().nodeName().equals("pre") && !hasSiblings;
