@@ -2,11 +2,12 @@
 Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/formatting) with Java.
 
 ### Build
-gradle wrapper
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
-./gradlew tasks --all
-./gradlew clean assemble
-ls build/libs/html2mrkdwn-1.0.1.jar
+
+* gradle wrapper
+* export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+* ./gradlew tasks --all
+* ./gradlew clean assemble
+* ls build/libs/html2mrkdwn-1.0.1.jar
 
 ### Installation
 Gradle:
@@ -83,5 +84,3 @@ public class Main {
 
 ### Acknowledgment
 This library is a fork of https://github.com/furstenheim/copy-down which is a port to Java of the wonderful library [Turndown.js](https://github.com/domchristie/turndown).
-
-This project is supported by Intellij open source license
