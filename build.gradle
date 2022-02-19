@@ -10,13 +10,13 @@ buildscript {
 
 plugins {
     id 'java'
-    id 'com.vanniktech.maven.publish' version "0.11.1"
+    //id 'com.vanniktech.maven.publish' version "0.11.1"
     id 'signing'
 }
 
 
 group 'io.github.furstenheim'
-version '1.0'
+version '1.0.1'
 
 repositories {
     maven {
