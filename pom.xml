@@ -9,8 +9,27 @@
   <version>1.0.1</version>
 
   <name>html2mrkdwn</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <description>Convert HTML into Slack mrkdwn with Java.</description>
+  <url>https://github.com/wyona/html2mrkdwn</url>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
+  <developers>
+     <developer>
+       <name>Michael Wechner</name>
+       <email>michael.wechner@wyona.com</email>
+       <organization>Wyona</organization>
+       <organizationUrl>http://wyona.com</organizationUrl>
+     </developer>
+   </developers>
+  <scm>
+    <connection>scm:git:https://github.com/wyona/html2mrkdwn.git</connection>
+    <developerConnection>scm:git:git@github.com:wyona/html2mrkdwn.git</developerConnection>
+    <url>https://github.com/wyona/html2mrkdwn/tree/master</url>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
