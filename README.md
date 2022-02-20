@@ -9,11 +9,12 @@ Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/format
 * ./gradlew clean assemble
 * ls build/libs/html2mrkdwn-1.0.1.jar
 
-### Build with Maven
+### Build and Distribution with Maven
 
 * export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
 * mvn clean install
 * ls target/html2mrkdwn-1.0.1.jar
+* mvn deploy
 
 ### Installation
 Gradle:
