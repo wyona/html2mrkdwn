@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 /**
  * Main class of the package
  */
-@Slf4j
+//@Slf4j
 public class CopyDown {
     public CopyDown () {
         this.options = OptionsBuilder.anOptions().build();
