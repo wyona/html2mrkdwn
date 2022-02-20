@@ -3,3 +3,5 @@ gradle/*
 .gradle
 gradle.properties
 target
+.idea
+html2mrkdwn.iml
