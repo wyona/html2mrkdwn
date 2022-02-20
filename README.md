@@ -15,7 +15,10 @@ Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/format
 * mvn clean install
 * ls target/html2mrkdwn-1.0.1.jar
 
+* Install gpg or gpg2 (set gpg.executable inside ~/.m2/settings.xml)
+* export GPG_TTY=$(tty)
 * mvn clean deploy
+* Use gpg.passphrase from ~/.m2/settings.xml
 
 ### Installation
 Gradle:
