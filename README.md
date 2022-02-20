@@ -19,6 +19,9 @@ Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/format
 * export GPG_TTY=$(tty)
 * mvn clean deploy
 * Use gpg.passphrase from ~/.m2/settings.xml
+* https://s01.oss.sonatype.org/#stagingRepositories (https://central.sonatype.org/publish/release/#locate-and-examine-your-staging-repository)
+* https://s01.oss.sonatype.org/content/groups/public/org/wyona/html2mrkdwn/html2mrkdwn/
+* https://repo1.maven.org/maven2/org/wyona/html2mrkdwn/html2mrkdwn/ (available typically within 30 minutes)
 
 ### Installation
 Gradle:
