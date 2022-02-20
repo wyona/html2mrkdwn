@@ -1,13 +1,19 @@
 ## HTML 2 Slack mrkdwn
 Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/formatting) with Java.
 
-### Build
+### Build with Gradle
 
 * gradle wrapper
 * export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
 * ./gradlew tasks --all
 * ./gradlew clean assemble
 * ls build/libs/html2mrkdwn-1.0.1.jar
+
+### Build with Maven
+
+* export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+* mvn clean install
+* ls target/html2mrkdwn-1.0.1.jar
 
 ### Installation
 Gradle:
