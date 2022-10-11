@@ -46,7 +46,8 @@ Maven:
 
 ```java
 
-import io.github.furstenheim.CopyDown;
+import org.wyona.html2mrkdwn.CopyDown;
+
 public class Main {
     public static void main (String[] args) {
         CopyDown converter = new CopyDown();
@@ -63,9 +64,9 @@ public class Main {
 It is possible to use options for converting markdown:
 
 ```java
-import io.github.furstenheim.CopyDown;
-import io.github.furstenheim.Options;
-import io.github.furstenheim.OptionsBuilder;
+import org.wyona.html2mrkdwn.CopyDown;
+import org.wyona.html2mrkdwn.Options;
+import org.wyona.html2mrkdwn.OptionsBuilder;
 
 public class Main {
    public static void main (String[] args) {
