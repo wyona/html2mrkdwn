@@ -14,8 +14,9 @@ Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/format
 * export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
 * Install gpg or gpg2 according to https://mikeross.xyz/gpg-without-gpgtools-on-mac/ and set gpg.executable inside ~/.m2/settings.xml
 * export GPG_TTY=$(tty)
-* Make sure that the pom file contains the distributionManagement section according to https://central.sonatype.org/publish/publish-maven/#distribution-management-and-authentication
 * Make sure that the pom file contains the maven-gpg-plugin plugin according to https://central.sonatype.org/publish/publish-maven/#gpg-signed-components
+* Make sure that the pom file contains the distributionManagement section according to https://central.sonatype.org/publish/publish-maven/#distribution-management-and-authentication
+* Make sure that the pom file contains the required meta information according to https://central.sonatype.org/publish/requirements/#sufficient-metadata
 * mvn clean install (Use gpg.passphrase from ~/.m2/settings.xml)
 * ls target/html2mrkdwn-1.0.1.jar
 * mvn clean deploy (Use gpg.passphrase from ~/.m2/settings.xml)
