@@ -17,7 +17,8 @@ Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/format
 
 * Install gpg or gpg2 (set gpg.executable inside ~/.m2/settings.xml)
 * export GPG_TTY=$(tty)
-* Check pom file whether it contains the distributionManagement section according to https://central.sonatype.org/publish/publish-maven/#distribution-management-and-authentication
+* Make sure that the pom file contains the distributionManagement section according to https://central.sonatype.org/publish/publish-maven/#distribution-management-and-authentication
+* Make sure that the pom file contains the maven-gpg-plugin plugin according to https://central.sonatype.org/publish/publish-maven/#gpg-signed-components
 * mvn clean deploy
 * Use gpg.passphrase from ~/.m2/settings.xml
 * https://s01.oss.sonatype.org/#stagingRepositories (https://central.sonatype.org/publish/release/#locate-and-examine-your-staging-repository)
