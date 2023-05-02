@@ -12,14 +12,13 @@ Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/format
 ### Build and Distribution with Maven
 
 * export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
-* Install gpg or gpg2 (set gpg.executable inside ~/.m2/settings.xml)
+* Install gpg or gpg2 according to https://mikeross.xyz/gpg-without-gpgtools-on-mac/ and set gpg.executable inside ~/.m2/settings.xml
 * export GPG_TTY=$(tty)
 * Make sure that the pom file contains the distributionManagement section according to https://central.sonatype.org/publish/publish-maven/#distribution-management-and-authentication
 * Make sure that the pom file contains the maven-gpg-plugin plugin according to https://central.sonatype.org/publish/publish-maven/#gpg-signed-components
-* mvn clean install
+* mvn clean install (Use gpg.passphrase from ~/.m2/settings.xml)
 * ls target/html2mrkdwn-1.0.1.jar
-* mvn clean deploy
-* Use gpg.passphrase from ~/.m2/settings.xml
+* mvn clean deploy (Use gpg.passphrase from ~/.m2/settings.xml)
 * https://s01.oss.sonatype.org/#stagingRepositories (https://central.sonatype.org/publish/release/#locate-and-examine-your-staging-repository)
 * https://s01.oss.sonatype.org/content/groups/public/org/wyona/html2mrkdwn/html2mrkdwn/
 * https://repo1.maven.org/maven2/org/wyona/html2mrkdwn/html2mrkdwn/ (available typically within 30 minutes)
