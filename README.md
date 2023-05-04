@@ -11,6 +11,8 @@ Convert HTML into [Slack mrkdwn](https://api.slack.com/reference/surfaces/format
 
 ### Build and Distribution with Maven
 
+Issues can be submitted at https://issues.sonatype.org/
+
 * export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
 * Install gpg or gpg2 according to https://mikeross.xyz/gpg-without-gpgtools-on-mac/ and set gpg.executable inside ~/.m2/settings.xml
 * export GPG_TTY=$(tty)
